@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem} % For customizing enumeration
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{margin=1.5in} % Adjust margins as needed
+\title{Problem 2: Solution}
+\author{Vedant Yadav, Susmit Sarkar and Atharva Inamdar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solution}
+
+We will solve this problem using method of control points.
+Firstly, we will align the coordinate system of MATLAB with that of the graph. For this, the motion model will be a combination of rotation, translation and scaling in X and Y. The matrix associated with the following model is as follows:-
+
+\hspace{5cm}
+\[A = 
+\begin{bmatrix}
+s_x \cos(\theta) & -s_y \sin(\theta) & t_x \\
+s_x \sin(\theta) & s_y \cos(\theta) & t_y \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\]
+
+As we can see, there are 5 degrees of freedom in this matrix. For that, we would need 5 equations to determine the 5 constants. We will use given (x,y) points in the graph to do this.
+
+After scanning the image, we know some of the points and their (x,y) value in the coordinate system on the graph and we will also know the coordinate in the MATLAB coordinate system by using the impixelinfo function. 
+
+Therefore, in the transformation equation, $Ax_m= x_g$, we will substitute five pairs of the coordinates in both the coordinate systems and solve for the five constants. 
+
+\end{document}
