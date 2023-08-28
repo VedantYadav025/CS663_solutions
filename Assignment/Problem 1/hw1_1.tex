@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem} % For customizing enumeration
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{margin=1.5in} % Adjust margins as needed
+\title{Problem 1: Solution}
+\author{Vedant Yadav, Susmit Sarkar and Atharva Inamdar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solution1}
+\begin{enumerate}[label = (\alph*)]
+  \item In this case, the appropriate motion model will be rigid. This is because while slightly displacing the image, image might be translated, rotated or both. Thus, we need both rotation and translation for this case. Since there is no change in the size of the image,
+  we will not prefer affine or scaling since they have large degrees of freedom which are un-required\dots
+  
+  Thus, the appropriate motion model in this case is \textbf{Rigid}(translation + rotation).
+
+  \item  This is a super-set of the above problem. In this case, we will need to first align image by using rigid motion model. But, since the scanners have different resolutions, the pixel size will be different and hence,they are still not in complete alignment. Therfore, to achieve complete alignment, we will need to scale the one of the image by the ratio of resolutions of the scanner,which lead to complete image alignment.
+  
+  Therefore, the appropriate motion model in this case is \textbf{Rigid} and \textbf{Equal Scaling in X and Y}.
+
+  \item Firstly, we will perform \textbf{rotation} and \textbf{translation} on one of the image. Then, we will have to perfrom reflection on one of the image about $x = L / 2$($L$ being the length of the domain), and superimpose the output on the second image. This will come under the category of \textbf{affine} transformations.
+
+  The matrix operations for this transformations are as follows:-
+  
+  \hspace{5cm}
+   $A = \begin{bmatrix}
+    -1 & 0 & 1\\
+    0 & 1 & 0\\
+    0 & 0 & 1 
+    \end{bmatrix}$
+
+\end{enumerate}
+
+\end{document}
+
+
+
