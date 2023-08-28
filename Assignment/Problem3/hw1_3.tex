@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\title{Problem 3: Solution}
+\author{Vedant Yadav, Susmit Sarkar, and Atharva Inamdar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Solution}
+
+Let $I + J = K$, and let $f(x,y)$ and $g(x,y)$ denote the intensities of $I$ and $J$ respectively. When we add the two images, we get
+\begin{equation}
+    K = f(x,y) + g(x,y)
+\end{equation}
+
+Let $p_K(k)$ denote the PMF of the image $K$. This implies that
+\begin{align}
+    p_K(k) &= P(f(x,y) + g(x,y) = k) \quad \text{for all } (x,y) \text{ in the domain of the image.} \nonumber \\
+    &= \boxed{\sum_{r = 1}^{k} p_I(r) \cdot p_J(k - r)}
+\end{align}
+
+The above operation is similar to the \textbf{convolution} operator.
+
+\end{document}
